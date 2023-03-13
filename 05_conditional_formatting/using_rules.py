@@ -20,5 +20,5 @@ def applying_rules(path, rule_formula, output_path):
 
 
 if __name__ == "__main__":
-    applying_rules("ratings.xlsx", rule_formula="$B1<3",
+    applying_rules("ratings.xlsx", rule_formula="IF(AND(NOT(ISBLANK($B1)),$B1<3),TRUE,FALSE)",
                    output_path="rules.xlsx")
