@@ -26,4 +26,6 @@ def freeze(path, row_to_freeze):
 
 
 if __name__ == "__main__":
-    freeze("freeze.xlsx", row_to_freeze="A2")
+    freeze("freeze.xlsx", row_to_freeze="A4")
+    freeze("freeze2.xlsx", row_to_freeze="D1")
+    freeze("freeze3.xlsx", row_to_freeze="D4")

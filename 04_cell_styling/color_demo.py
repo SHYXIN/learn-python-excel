@@ -1,5 +1,6 @@
 # color_demo.py
 
+from itertools import chain
 import openpyxl
 from openpyxl.styles import PatternFill
 
@@ -13,9 +14,10 @@ def color_demo(path):
     workbook = openpyxl.Workbook()
     sheet = workbook.active
 
-    for row in colors:
-        sheet["A1"] =
-        sheet["A2"].fill = PatternFill(start_color=color, end_color=color,
+
+    for idx,color in enumerate(chain(*colors), 1):
+        sheet[f"A{idx}"] =idx
+        sheet[f"A{idx}"].fill = PatternFill(start_color=color, end_color=color,
                                        fill_type="solid")
 
 
